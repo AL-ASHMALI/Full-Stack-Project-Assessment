@@ -2,9 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Video from "./Components/Video";
 import AddVideoBtn from "./Buttons/AddVideoBtn";
+import VideoCard from "./Components/VideoCard";
 
 function App() {
   const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/videos") 
+    .then((response) => response.json())
+    .then((data) => console.log(data)) 
+    .catch((error) => console.log(error)); 
+  }, []); 
   function handleDelete(id) {
     let filterVideos = videos.filter((video) => video.id !== id);
     setVideos(filterVideos);

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import VideoCard from "./VideoCard";
 
 const AddNewVideo = ({ addNewVideo }) => {
   const [VideoTitle, setVideoTitle] = useState("");
@@ -57,9 +58,10 @@ const AddNewVideo = ({ addNewVideo }) => {
         form="form1"
         value="Submit"
       >
-        {" "}
-        Add{" "}
+        Add
       </button>
+      <VideoCard /> 
+      
     </div>
   );
 };
