@@ -15,7 +15,6 @@ const VideoCard = () => {
             <a
               href={item.url}
               className="btn btn-primary"
-              rel="noopener noreferrer"
             >
               Watch
             </a>

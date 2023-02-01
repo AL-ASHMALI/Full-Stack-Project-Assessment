@@ -27,7 +27,7 @@ const AddNewVideo = ({ addNewVideo }) => {
       rating: 0,
     };
     addNewVideo(newVideo);
-    if (!VideoTitle) {
+    if (!VideoTitle || !VideoUrl) {
       alert("ALl fields must be filled correctly");
       return false;
     }
@@ -60,8 +60,7 @@ const AddNewVideo = ({ addNewVideo }) => {
       >
         Add
       </button>
-      <VideoCard /> 
-      
+      <VideoCard />
     </div>
   );
 };
